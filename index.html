@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Down Checklist</title>
+  </head>
+  <style>
+    .dropDown-container {
+      display: block;
+      width: 550px;
+      height: 400px;
+      margin: 10rem auto;
+    }
+
+    .selectBox {
+      position: relative;
+    }
+
+    .selectBox select {
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .overselect {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    #checkboxes {
+      display: none;
+      border: 1px #dadada solid;
+    }
+
+    #checkboxes label {
+      display: block;
+    }
+
+    #checkboxes label:hover {
+      background-color: #ffbf1e;
+    }
+  </style>
+  <body>
+    <div class="dropDown-container">
+      <span>Which are your favorite languages? Please select down below</span>
+      <div id="selectOption" class="selectBox" onclick="toggleCheckboxes()">
+        <select>
+          <option>Languages</option>
+        </select>
+        <div class="overselect"></div>
+      </div>
+      <div id="checkboxes">
+        <label for="one">
+          <input
+            type="checkbox"
+            id="one"
+            onchange="checkboxesOnChange()"
+            value="JavaScript"
+          />JavaScript</label
+        >
+        <label for="two">
+          <input
+            type="checkbox"
+            id="two"
+            onchange="checkboxesOnChange()"
+            value="Python"
+          />Python</label
+        >
+        <label for="three">
+          <input
+            type="checkbox"
+            id="three"
+            onchange="checkboxesOnChange()"
+            value="Java"
+          />Java</label
+        >
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
